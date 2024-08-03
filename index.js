@@ -3,10 +3,10 @@ const app = express();
 const http = require("http");
 const { Server } = require("socket.io");
 const cors = require('cors');
-const ACTIONS = require("./ACTIONS");
+const ACTIONS = require("./Actions");
 
 app.use(cors({
-  origin: 'https://mellifluous-crisp-a9f828.netlify.app',
+  origin: 'https://rad-peony-7e653a.netlify.app/',
   methods: ['GET', 'POST']
 }));
 
@@ -14,7 +14,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: 'https://mellifluous-crisp-a9f828.netlify.app',
+    origin: 'https://rad-peony-7e653a.netlify.app/',
     methods: ['GET', 'POST']
   }
 });
